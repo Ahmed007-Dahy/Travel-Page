@@ -1,0 +1,25 @@
+// import scss files of abstract brunch
+@import 'abstract/variables';
+@import 'abstract/functions';
+@import 'abstract/mixins';
+// import scss files of base brunch
+@import 'base/animation';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
+// import scss files of layout brunch
+@import 'layout/header';
+@import 'layout/about';
+@import 'layout/footer';
+@import 'layout/navigation';
+// import scss files of components brunch
+@import 'components/button';
+@import 'components/gallery';
+@import 'components/features-part';
+@import 'components/tours-card';
+@import 'components/testimonial';
+@import 'components/bg-video';
+@import 'components/form';
+@import 'components/modal';
+// import scss files of pages brunch
+@import 'pages/home-page';

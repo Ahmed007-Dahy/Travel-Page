@@ -1,0 +1,38 @@
+.header {
+    position: relative;
+    height: 97vh;
+    background-image: linear-gradient(
+            to left bottom,
+            rgba($light-color, 0.7),
+            rgba($dark-color, 0.551)
+        ),
+        url(../images/header.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    clip-path: polygon(0 0, 100% 0, 100% 86vh, 0 100%);
+    max-width: 100%;
+    background-attachment: fixed;
+    @media only screen and (max-width: 992px) {
+        background-position: left bottom;
+    }
+    &__logo {
+        height: 6rem;
+        position: relative;
+        top: 2rem;
+        left: 1.5rem;
+        @media only screen and (max-width: 992px) {
+            width: 5rem;
+            height: 4rem;
+        }
+    }
+    //heading text part
+    &__text-box {
+        position: absolute;
+        top: 45%;
+        left: 51%;
+        transform: translate(-50%, -50%);
+        /* this function is remove the lag happend beacuse animation */
+        backface-visibility: hidden;
+        text-align: center;
+    }
+}

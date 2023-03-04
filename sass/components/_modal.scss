@@ -1,0 +1,91 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($shadow-btn-color, 0.7);
+    z-index: 1000;
+    transition: all 0.5s;
+    &__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        align-items: center;
+        gap: 5rem;
+        width: 75%;
+        background-color: $primary-color;
+        overflow: hidden;
+        border-radius: 0.4rem;
+        box-shadow: 0rem 2rem 3rem rgba($shadow-btn-color, 0.5);
+        z-index: 1500;
+        @media only screen and (max-width: 992px) {
+            overflow: scroll;
+        }
+        @media only screen and (max-width: 767px) {
+            padding: 0rem 1.5rem;
+            padding-bottom: 1rem;
+            width: 90%;
+            height: auto;
+            grid-template-columns: repeat(auto-fit, minmax(25%, auto));
+        }
+    }
+    &__btn {
+        margin-bottom: 2rem;
+    }
+    &__images {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        @media only screen and (max-width: 992px) {
+            display: none;
+            visibility: hidden;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    &__text {
+        width: 100%;
+        padding-top: 5rem;
+        @media only screen and (max-width: 992px) {
+            padding-top: 3rem;
+        }
+        h3 {
+            font-size: 2.2rem;
+            font-family: 'Cairo';
+            font-weight: 700;
+            color: $balance-color;
+            margin: 1rem 0rem;
+            @media only screen and (max-width: 992px) {
+                font-size: 1.7rem;
+                font-weight: 500;
+            }
+        }
+        p {
+            font-size: 1.4rem;
+            font-family: 'Monda';
+            font-weight: 500;
+            color: $light-color;
+            line-height: 2.5;
+            padding-top: 0.7rem;
+            &:not(:last-child) {
+                border-bottom: 1px solid $balance-color;
+                padding-bottom: 0.7rem;
+            }
+        }
+    }
+    &__close {
+        position: absolute;
+        top: 0.3rem;
+        right: 1rem;
+        background-color: transparent;
+        border: none;
+        font-size: 4rem;
+        color: $light-color;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+}

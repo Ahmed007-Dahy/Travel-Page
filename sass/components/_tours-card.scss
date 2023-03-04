@@ -1,0 +1,165 @@
+.card-content {
+    position: relative;
+    -moz-perspective: 150rem;
+    perspective: 150rem;
+    height: 55rem;
+    &__side {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 55rem;
+        backface-visibility: hidden;
+        transition: all ease 0.9s;
+        width: 100%;
+        border-radius: 4px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 3rem rgba($color-grey, 0.6);
+        &--front {
+            background-color: white;
+        }
+        &--back {
+            transform: rotateY(180deg);
+        }
+        &--back-1 {
+            background-image: linear-gradient(
+                to right bottom,
+                $secondary-gradient-color-2,
+                $secondary-gradient-color-1
+            );
+        }
+        &--back-2 {
+            background-image: linear-gradient(
+                to right bottom,
+                $dark-color,
+                $light-color
+            );
+        }
+        &--back-3 {
+            background-image: linear-gradient(
+                to right bottom,
+                $tertiary-gradient-color-2,
+                $tertiary-gradient-color-1
+            );
+        }
+    }
+    &__pic {
+        background-size: cover;
+        height: 25rem;
+        background-blend-mode: screen;
+        background-position: center;
+        clip-path: polygon(0 0, 100% 0, 100% 86%, 0 100%);
+    }
+    &__pic-1 {
+        background-image: linear-gradient(
+                to right bottom,
+                $secondary-gradient-color-2,
+                $secondary-gradient-color-1
+            ),
+            url(../images/card-1.jpg);
+    }
+    &__pic-2 {
+        background-image: linear-gradient(
+                to right bottom,
+                $dark-color,
+                $light-color
+            ),
+            url(../images/card-2.jpg);
+    }
+    &__pic-3 {
+        background-image: linear-gradient(
+                to right bottom,
+                $tertiary-gradient-color-2,
+                $tertiary-gradient-color-1
+            ),
+            url(../images/card-3.jpg);
+    }
+    &__heading {
+        position: absolute;
+        top: 15rem;
+        right: 2rem;
+        font-size: 2.9rem;
+        color: $color-white;
+        font-weight: 400;
+        font-family: 'Monda';
+        text-transform: uppercase;
+        width: 75%;
+        text-align: right;
+        @media only screen and (max-width: 991px) {
+            right: 1.5rem;
+            width: 92%;
+            font-size: 2.6rem;
+        }
+    }
+    &__heading--span {
+        padding: 0rem 2rem;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        &-1 {
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($secondary-gradient-color-2, 0.75),
+                rgba($secondary-gradient-color-1, 0.75)
+            );
+        }
+        &-2 {
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($dark-color, 0.8),
+                rgba($light-color, 0.8)
+            );
+        }
+        &-3 {
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($tertiary-gradient-color-2, 0.75),
+                rgba($tertiary-gradient-color-1, 0.75)
+            );
+        }
+    }
+    &__info {
+        ul {
+            list-style: none;
+            width: 85%;
+            margin: 0 auto;
+            text-align: center;
+            li {
+                font-size: 1.7rem;
+                font-family: 'Cairo';
+                font-weight: 300;
+                padding: 1.2rem;
+                &:not(:last-child) {
+                    border-bottom: 1px solid $color-grey-text;
+                }
+            }
+        }
+    }
+    &__back--info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 100%;
+        text-transform: uppercase;
+    }
+    &__price--box {
+        color: $color-white;
+        margin-bottom: 8rem;
+        font-family: 'Cairo';
+    }
+    &__price--only {
+        font-size: 1.7rem;
+        margin-bottom: 5rem;
+        letter-spacing: 0.3rem;
+    }
+    &__price--money {
+        font-size: 7rem;
+        font-weight: 100;
+    }
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+}

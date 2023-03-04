@@ -1,0 +1,78 @@
+.testimo-content {
+    width: 60%;
+    margin: 0 auto;
+    padding: 5.2rem 9rem;
+    font-size: 1.8rem;
+    background-color: rgba($color-white, 0.5);
+    box-shadow: 0 2.5rem 4rem rgba($shadow-btn-color, 0.3);
+    border-radius: 5px;
+    transform: skewX(-5deg);
+    margin-bottom: 15rem;
+    @media only screen and (max-width: 767px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2rem 1rem;
+        transform: skewX(0deg);
+        font-size: 1.5rem;
+    }
+    @media only screen and (max-width: 992px) {
+        width: 100%;
+    }
+    &__shape {
+        position: relative;
+        width: 17rem;
+        height: 17rem;
+        float: left;
+        -webkit-shape-outside: circle(50%);
+        shape-outside: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        transform: translateX(-3rem) skewX(5deg);
+        margin-top: -1rem;
+        @media only screen and (max-width: 767px) {
+            width: 15rem;
+            height: 16rem;
+            margin: 0rem auto 2.5rem auto;
+            transform: translateX(0rem) skewX(0deg);
+        }
+        @media only screen and (max-width: 992px) {
+            margin-top: 0rem;
+        }
+    }
+    &__text {
+        width: 100%;
+        transform: skewX(5deg);
+        @media only screen and (max-width: 767px) {
+            transform: skew(0deg);
+        }
+    }
+    &__img {
+        height: 100%;
+        transform: translateX(-4rem) scale(1.5);
+        transition: all 0.4s;
+    }
+    &__caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        color: $color-white;
+        font-family: 'Monda';
+        font-weight: 500;
+        font-size: 2rem;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+        opacity: 0;
+        transition: all 0.4s;
+    }
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+    &:hover &__img {
+        transform: translateX(-4rem) scale(1);
+        filter: blur(4px) brightness(75%);
+    }
+}

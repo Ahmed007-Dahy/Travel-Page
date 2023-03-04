@@ -1,0 +1,12 @@
+.about-content {
+    display: grid;
+    grid-template-columns: 50rem 50rem;
+    grid-template-rows: auto;
+    gap: 25rem;
+    justify-content: space-around;
+    @media only screen and (max-width: 992px) {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        gap: 15rem;
+    }
+}

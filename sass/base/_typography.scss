@@ -1,0 +1,75 @@
+.heading-text {
+    color: $color-white;
+    text-transform: uppercase;
+    margin-bottom: 5.5rem;
+    @media only screen and (max-width: 992px) {
+        margin-bottom: 3rem;
+    }
+    &--first {
+        display: block;
+        font-family: 'Monda';
+        letter-spacing: 4.5rem;
+        font-size: 6rem;
+        font-weight: 500;
+        animation: moveFromTop 1s ease-out 0.9s;
+        animation-fill-mode: backwards;
+        @media only screen and (max-width: 992px) {
+            font-size: 3rem;
+            letter-spacing: 1.2rem;
+        }
+    }
+    &--second {
+        display: block;
+        font-family: 'Cairo';
+        letter-spacing: 2.16rem;
+        font-size: 2rem;
+        animation: moveFromBottom 1s ease-out 0.9s;
+        animation-fill-mode: backwards;
+        @media only screen and (max-width: 992px) {
+            font-size: 1rem;
+            letter-spacing: 0.53rem;
+        }
+    }
+}
+.heading-second {
+    font-size: 3.7rem;
+    font-weight: 700;
+    font-family: 'Monda';
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    display: inline-block;
+    background-image: linear-gradient(to right, $light-color, $balance-color);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: all 0.3s;
+    @media only screen and (max-width: 992px) {
+        font-size: 2rem;
+    }
+    &:hover {
+        transform: skewX(8deg) skewY(2deg) scale(1.2);
+        text-shadow: 0.2rem 0.2rem 0.3rem rgba($dark-color, 0.3);
+        @media only screen and (max-width: 992px) {
+            transform: skewX(4deg) skewY(2deg) scale(1.1);
+            text-shadow: 0.2rem 0.2rem 0.3rem rgba($dark-color, 0.3);
+        }
+    }
+}
+.text-content--heading-first {
+    font-size: 1.9rem;
+    font-family: 'Monda';
+    font-weight: 600;
+    text-transform: uppercase;
+    color: $balance-color;
+}
+.praghraph {
+    font-size: 1.7rem;
+    font-family: 'Cairo';
+    color: $color-grey;
+}
+//Responsive-part for All heading
+@media only screen and (max-width: 992px) {
+    .text-content {
+        padding-left: 2rem;
+    }
+}
